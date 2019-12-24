@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="header">
+    <h1>News API</h1>
+  </div>
+
+</div>
+<div class="container">
+
+  <div class="topnav">
+    <a href="#">Apple</a>
+    <a href="#">India</a>
+    <a href="#">Cricket</a>
+    <a href="#">Oscar 2k19</a>
+    <a href="#">Technology</a>
+    <a href="#">International</a>
+  </div>
+  <div class="row box1" *ngFor='let x of aplleNewsData;let i = index'>
+
+    <div class="col-8">
+      <h4>{{x.title}}</h4>
+
+      <p><b>news by:</b>{{x.author}}</p>
+
+      <p>{{x.description}}</p>
+
+      <div>
+        <span>read more at &nbsp; <h4><a href="#read-more">Academy</a></h4></span>
+
+        <p id="read-more">{{x.content}}</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <img class="img{{i}}" src="{{x.urlToImage}}" alt="img1" width="350" height="350">
+    </div>
+  </div>
+  <div class="bottom-margin"></div>
+</div>
